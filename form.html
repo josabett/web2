@@ -6,6 +6,8 @@
   <title>Al Fondo Bar</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/app.js"></script>
+  <link rel="script" href="assets/app.js">
 </head>
 <body>
   <!-- Barra de navegacion -->
@@ -49,31 +51,58 @@
 <div class="contenedor">
     <div class="container py-5 text-center">
         <!-- Formulario -->
-        <form action="">
+        <form class="needs-validation" novalidate>
             <div class="row">
                 <div class="mb-4" class="col-12 col-sm-12 col-md-12">
-                    <input type="nombre" class="form-control" placeholder="Ingrese su Nombre">
+                    <div class="col-md-1">
+                      <label for="nomre">Nombre:</label>
+                    </div>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su Nombre" required>
+                    <div class="valid-feedback">
+                      Todo bien
+                    </div>
+                    <div class="invalid-feedback">
+                      Este necesario poner el nombre
+                    </div>
 
                 </div>
 
                 <div class="mb-4" class="col-12 col-sm-12 col-md-12">
-                    <input type="email" class="form-control" placeholder="Ingrese su Correo Electronico">
+                  <div class="col-md-3 col-md-2">
+                    <label for="nomre">Correo electronico:</label>
+                  </div>
+                    <input type="text" class="form-control" id="email" placeholder="Ingrese su Correo Electronico" required>
+                    <div class="valid-feedback">
+                      Todo bien
+                    </div>
+                    <div class="invalid-feedback">
+                      Este necesario poner el email
+                    </div>
 
                 </div>
 
                 <div class="mb-4" class="col-12 col-sm-12 col-md-12">
-                    <input type="mesa" class="form-control" placeholder="Ingrese su Numero de Mesa">
+                  <div class="col-md-3 col-md-2">
+                    <label for="nomre">Numero de mesa:</label>
+                  </div>
+                    <input type="text" class="form-control" id="mesa"  placeholder="Ingrese su Numero de Mesa" required>
+                    <div class="valid-feedback">
+                      Todo bien
+                    </div>
+                    <div class="invalid-feedback">
+                      Este necesario poner el numero de mesa
+                    </div>
 
                 </div>
 
                 <div class="mb-4" class="col-12 col-sm-12 col-md-12 ">
                     <textarea name="description" class="form-control" id="" cols="20" rows="5" placeholder="Si desea agregar algo o modificar un pedido Aqui"></textarea>
 
-                </div>
-                <h5 class="col-auto mb-4" class="titulo">Elija su metodo de pago</h5>
+                </div >
+                <h5 class="col-auto mb-4" class="titulo" >Elija su metodo de pago</h5>
                 <br>
                 <div class="col-auto mb-4" class="form-check">
-                    <input class="form-check-input" type="radio" name="prueba" id="radio1">
+                    <input class="form-check-input" type="radio" name="prueba" id="radio1" >
                     <label class="form-check-label" for="radio1"> Efectivo</label>
                 </div>
 
@@ -91,7 +120,33 @@
 
     
     </div>  
+
+    <script>
+      (() => {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+    </script>
 </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>
