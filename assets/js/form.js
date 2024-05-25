@@ -6,7 +6,7 @@ form.addEventListener('submit', (event) => {
   form.classList.add('was-validated')
 
   if (form.checkValidity()) {
-    alert('Mensaje enviado')
+    alert('Pedido ingresado correctamente')
     form.reset()
     form.classList.remove('was-validated')
   }
