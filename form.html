@@ -52,7 +52,9 @@
         <label for="nombre" class="form-label">Nombre</label>
         <input type="text" class="form-control" id="nombre" aria-describedby="nombre" placeholder="Ingrese su Nombre" required>
         <div class="valid-feedback">Todo bien</div>
-        <div class="invalid-feedback">Este necesario poner el nombre</div>
+
+        <div class="invalid-feedback">Es necesario ingresar el nombre</div>
+
       </div>
 
       <div class="mb-3">
@@ -60,23 +62,34 @@
         <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Ingrese su Correo Electronico" required>
         <div id="email-validate" class="form-text"></div>
         <div class="valid-feedback">Todo bien</div>
-        <div class="invalid-feedback">Este necesario poner el Correo electronico</div>
+
+        <div class="invalid-feedback">Es necesario ingresar el Correo electronico</div>
+
+
       </div>
 
       <div class="mb-3">
         <label for="nummesa" class="form-label">Numero de mesa:</label>
         <input type="number" class="form-control" id="nummesa" aria-describedby="nummesa" placeholder="Ingrese su Numero de Mesa" required>
         <div class="valid-feedback">Todo bien</div>
-        <div class="invalid-feedback">Este necesario poner el Numero de mesa</div>
+
+        <div class="invalid-feedback">Es necesario ingresar el Numero de mesa</div>
       </div>
 
       <div class="mb-3">
+        <label for="description" class="form-label">Descripción</label>
+
+
+      <div class="mb-3">
         <label for="description" class="form-label">Example textarea</label>
+
         <textarea class="form-control" id="description" rows="3" placeholder="Si desea agregar algo o modificar un pedido Aqui"></textarea>
       </div>
 
       <fieldset class="row mb-3">
-        <legend class="col-form-label col-sm-4 pt-0">Mestodo de Pago:</legend>
+
+        <legend class="col-form-label col-sm-4 pt-0">Metodo de Pago:</legend>
+
         <div class="col-sm-8">
           <div class="form-check">
             <input class="form-check-input" type="radio" name="gridRadios" id="efectivo" required>
