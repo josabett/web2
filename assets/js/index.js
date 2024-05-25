@@ -5,7 +5,7 @@ const getData = async (url) => {
   const data = await response.json()
   datosEconomicos.innerHTML = `
     <li>Dolar: ${data.dolar.valor.toLocaleString('es-ES')} pesos</li>
-    <li>UF: ${data.uf.valor.toLocaleString('es-ES')} pesos</li>
+    <li>Euro: ${data.euro.valor.toLocaleString('es-ES')} pesos</li>
   `
 }
 
